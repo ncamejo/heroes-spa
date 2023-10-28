@@ -4,16 +4,16 @@ import { useMemo } from 'react';
 
 export const HeroPage = () => {
   const { id, ...rest } = useParams();
-  const hero = useMemo(() => GetHeroById(id), [id])
+  const hero = useMemo(() => GetHeroById(id), [id]);
   const navigate = useNavigate();
 
   const onNavigateBack = () => {
-    navigate(
-      hero.publisher.includes('Marvel Comics')
-      ? '/marvel'
-      : '/dc'
-    );
-    // otra forma: navigate(-1); -> Regresa a la pagina anterior
+    // navigate(
+    //   hero.publisher.includes('Marvel Comics')
+    //   ? '/marvel'
+    //   : '/dc'
+    // );
+    navigate(-1); //-> otra forma:   Regresa a la pagina anterior
   };
 
   if (!hero) {

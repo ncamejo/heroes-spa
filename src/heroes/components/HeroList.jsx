@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { GetHeroesByPublisher } from '../helpers/GetHeroesByPublisher';
+import { GetHeroesByPublisher } from '../helpers/getHeroesByPublisher.js';
 import { HeroCard } from './HeroCard';
 
 export const HeroList = ({ publisher }) => {
